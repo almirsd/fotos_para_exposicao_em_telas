@@ -1,46 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Envie sua foto</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Envie sua foto</title>
 
-  <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <h1>Envie sua foto 📸</h1>
 
-  <h1>Envie sua foto 📸</h1>
+    <!-- INPUT DE FOTO -->
+    <input type="file" id="foto" />
 
-  <!-- INPUT DE FOTO -->
-  <input type="file" id="foto">
+    <br /><br />
 
-  <br><br>
+    <!-- BOTÃO ENVIAR -->
+    <button id="btnEnviar">Enviar</button>
 
-  <!-- BOTÃO ENVIAR -->
-  <button id="btnEnviar">Enviar</button>
+    <br /><br />
 
-  <br><br>
+    <!-- BOTÃO ÁLBUM -->
+    <a href="album.html">
+      <button>Ver Álbum 📸</button>
+    </a>
 
-  <!-- BOTÃO ÁLBUM -->
-  <a href="album.html">
-    <button>Ver Álbum 📸</button>
-  </a>
+    <br /><br />
 
-  <br><br>
+    <!-- BOTÃO TELÃO -->
+    <a href="telao.html">
+      <button>Abrir Telão 🎬</button>
+    </a>
 
-  <!-- BOTÃO TELÃO -->
-  <a href="telao.html">
-    <button>Abrir Telão 🎬</button>
-  </a>
+    <p id="mensagem"></p>
 
-  <p id="mensagem"></p>
+    <!-- RODAPÉ -->
+    <footer>
+      <p>
+        Criado por
+        <a
+          href="https://www.almirsolucoesdigitais.com.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Almir | Soluções Digitais</a
+        >
+      </p>
+    </footer>
 
-  <!-- Supabase -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-  <!-- JS -->
-  <script src="upload.js"></script>
-
-</body>
+    <!-- JS -->
+    <script src="upload.js"></script>
+  </body>
 </html>
