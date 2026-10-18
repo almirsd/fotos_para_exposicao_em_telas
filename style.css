@@ -1,0 +1,153 @@
+/* =========================
+   RESET / BASE
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 28px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+button {
+  font-size: 18px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Botão voltar */
+.btn-voltar {
+  display: block;
+  margin: 20px auto;
+}
+
+/* =========================
+   INPUT
+========================= */
+input[type="file"] {
+  margin-top: 20px;
+}
+
+/* =========================
+   GALERIA
+========================= */
+.album-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.photo-wrapper {
+  position: relative;
+}
+
+.photo-wrapper img {
+  width: 250px;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* Botão excluir (só aparece nas novas) */
+.photo-wrapper button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: red;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+/* =========================
+   ZOOM
+========================= */
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.zoom-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.zoom-overlay button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: red;
+}
+
+/* =========================
+   TELÃO
+========================= */
+body.telao {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#fotoTelao {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#fotoTelao.ativa {
+  opacity: 1;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 14px 24px;
+  }
+
+  .photo-wrapper img {
+    width: 90%;
+  }
+}
